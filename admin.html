@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Dashboard API Meteo</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="css/mdb.min.css" />
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="css/admin.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+    crossorigin="anonymous"></script>
+</head>
+
+<body><!--Main layout-->
+  <main style="margin-top: 24px">
+    <div class="container pt-4">
+            <!--Section: Statistics with subtitles-->
+            <section>
+              <div class="row">
+                <div class="col-xl-6 col-md-12 mb-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between p-md-1">
+                        <div class="d-flex flex-row">
+                          <div>
+                            <h4>TIME ZONE</h4>
+                            <p id="timezone"> .</p>
+                          </div>
+                        </div>
+                        <div class="align-self-center">
+                          <h2 id= "timezone_abreviation"class="h1 mb-0">18,000</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-6 col-md-12 mb-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between p-md-1">
+                        <div class="d-flex flex-row">
+                          <div>
+                            <h4>Temperatura</h4>
+                          </div>
+                        </div>
+                        <div class="align-self-center">
+                          <h2 id="Temperatura" class="h1 mb-0">84,695</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!--Section: Statistics with subtitles-->
+      <!-- Section: Main chart -->
+      <section class="mb-4">
+        <div class="card">
+          <div class="card-header py-3">
+            <h5 class="mb-0 text-center"><strong>Temperature Hourly</strong></h5>
+          </div>
+          <div class="card-body">
+            <canvas class="my-4 w-100" id="temperaturaH" height="380"></canvas>
+          </div>
+        </div>
+      </section>
+      <section class="mb-4">
+        <div class="card">
+          <div class="card-header py-3">
+            <h5 class="mb-0 text-center"><strong>Temperature Daily</strong></h5>
+          </div>
+          <div class="card-body">
+            <canvas class="my-4 w-100" id="temperaturaD" height="380"></canvas>
+          </div>
+        </div>
+      </section>
+      <!-- Section: Main chart -->
+
+      <!--Section: Sales Performance KPIs-->
+      <section class="mb-4">
+        <div class="card">
+          <div class="card-header text-center py-3">
+            <h5 class="mb-0 text-center">
+              <strong>Tabla de mareas puertos del Ecuador</strong>
+            </h5>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive" id="tabla_mareas">
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Section: Sales Performance KPIs-->
+    </div>
+  </main>
+  <!--Main layout-->
+  <!-- MDB -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript" src="js/admin.js"></script>
+  <script type="text/javascript" src="js/api.js"></script>
+
+</body>
+
+</html>
